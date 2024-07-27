@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="icon" href="./images/perfume.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css">
+    <title>Ecommerce</title>
+
+</head>
+<body>
+<h1>Ecommerce</h1>
+<nav>
+    <div id="cart" >
+        <button id="cartBtn">Cart</button>
+        <p id="itemsOnCart">Items on cart: 0</p>
+    </div>
+
+    <ul>
+        <li><a href="#" id="loginBtn">Login</a></li>
+        <li><a href="#" id="logoutBtn">Logout</a></li>
+        <li><a href="#" id="registerBtn">Register</a></li>
+    </ul>
+</nav>
+
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="loginClose">&times;</span>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" name="email" required>
+            <br>
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="password" required>
+            <br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
+
+
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="cartClose">&times;</span>
+        <h2>Cart</h2>
+        <table id="cartTable">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items"></tbody>
+            <tfoot>
+            <tr>
+                <td colspan="3">Total Amount</td>
+                <td id="purchase-total">Total $0.00</td>
+            </tr>
+            </tfoot>
+        </table>
+        <div>
+            <button id="checkoutBtn">Continue Checkout</button>
+        </div>
+    </div>
+</div>
+
+<div id="registerModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="registerClose">&times;</span>
+        <h2>Register</h2>
+        <form id="registerForm">
+            <br>
+            <label for="registerEmail">Email:</label>
+            <input type="email" id="registerEmail" name="email" required>
+            <br>
+            <label for="registerPassword">Password:</label>
+            <input type="password" id="registerPassword" name="password" required>
+            <br>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</div>
+<h2>Dive into our latest products</h2>
+<form id="hiddenForm" action="http://localhost:3000/products" method="POST" style="display: none;">
+    <input type="hidden" name="productId" id="productId">
+</form>
+<div id="app" class="container"></div>
+<script src="./javascripts/index.js"></script>
+
+</body>
+</html>

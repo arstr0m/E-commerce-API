@@ -1,0 +1,20 @@
+#app{
+    display: flex;
+    margin: auto auto;
+    width: 80%;
+}
+img{
+    max-width: 400px;
+    max-height: 300px;
+    margin: auto 10px;
+}
+h1{
+    text-align: center;
+}
+button{
+    margin: 20px auto;
+}
+.productData{
+    margin: auto 10px;
+    height: 50%;
+}
